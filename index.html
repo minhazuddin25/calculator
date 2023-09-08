@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Meta setup -->
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="keywords" content="">
+		<meta name="decription" content="">
+		<meta name="designer" content="Taposh">
+		
+		<!-- Title -->
+		<title>Welcome</title>
+		<!-- Fav Icon -->
+		<link rel="icon" href="img/favicon.ico" />	
+
+		<!-- Include Bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		
+		<!-- Main StyleSheet -->
+		<link rel="stylesheet" href="style.css" />	
+		
+		<!-- Responsive CSS -->
+		<link rel="stylesheet" href="css/responsive.css" />	
+		
+	</head>
+	<body>
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="c-header w-100 text-center">
+						
+					</div>
+					<div class="col-lg-12">
+						<div class="main-calc">
+							<h1 class="c-header">Calculator</h1>
+							<div class="calc-header">
+								<h3></h3>
+								<span class="d-block text-right"></span>
+							</div>
+							<div class="calc-body">
+								<button class="cbtn1">C</button>
+								<button class="cbtn">√</button>
+								<button class="cbtn">%</button>
+								<button class="cbtn">/</button>
+								<button class="cbtn">7</button>
+								<button class="cbtn">8</button>
+								<button class="cbtn">9</button>
+								<button class="cbtn">*</button>
+								<button class="cbtn">4</button>
+								<button class="cbtn">5</button>
+								<button class="cbtn">6</button>
+								<button class="cbtn">-</button>
+								<button class="cbtn">1</button>
+								<button class="cbtn">2</button>
+								<button class="cbtn">3</button>
+								<button class="cbtn">+</button>
+								<button class="cbtn">0</button>
+								<button class="cbtn">.</button>
+								<button class="delbtn">DEL</button>
+								<button class="cbtn3">=</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- Main jQuery -->
+		<script src="js/jquery-3.4.1.min.js"></script>		
+
+		<!-- Bootstrap Propper jQuery -->
+		<script src="js/popper.js"></script>
+		
+		<!-- Bootstrap jQuery -->
+		<script src="js/bootstrap.js"></script>
+
+		<!-- Fontawesome Script -->
+		<script src="https://kit.fontawesome.com/b5396d8f5f.js" crossorigin="anonymous"></script>
+		
+		<!-- Custom jQuery -->
+		<script src="js/scripts.js"></script>
+		
+		<!-- Scroll-Top button -->
+		<a href="#" class="scrolltotop"><i class="fas fa-angle-up"></i></a>
+		
+		<script>
+			jQuery(document).ready(function() {
+
+
+			jQuery(".cbtn").click(function() {
+
+				var x = jQuery(this).text();
+				var y = jQuery("h3").text();
+
+				jQuery("h3").text(y+=x);
+
+			})
+
+
+			jQuery(".cbtn3").click(function() {
+
+				var res = eval(jQuery("h3").text());
+
+				jQuery("span").text(res + " =");
+
+			})
+
+			jQuery(".cbtn1").click(function() {
+				jQuery("span").text("");
+				jQuery("h3").text("");
+			});
+
+			jQuery(".delbtn").click(function() {
+				var vdel = jQuery("h3").text();
+				
+				if(vdel){
+					jQuery("h3").text(vdel.slice(0,-1,-2));
+				} else {
+					jQuery("span").text("");
+				}
+			});
+
+
+
+
+
+
+
+
+
+
+
+
+});
+		</script>
+		
+	</body>
+</html>
